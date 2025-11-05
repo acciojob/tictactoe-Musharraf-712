@@ -20,10 +20,10 @@
     ];
 
     submitBtn.addEventListener('click', () => {
-      player1 = document.getElementById('player1').value.trim();
-      player2 = document.getElementById('player2').value.trim();
+      Player1 = document.getElementById('player1').value.trim();
+      Player2 = document.getElementById('player2').value.trim();
 
-      if (player1 === '' || player2 === '') {
+      if (Player1 === '' || Player2 === '') {
         alert('Please enter names for both players!');
         return;
       }
@@ -31,7 +31,7 @@
       playerForm.style.display = 'none';
       board.style.display = 'block';
 
-      currentPlayer = player1;
+      currentPlayer = Player1;
       message.textContent = `${currentPlayer}, you're up!`;
     });
 
@@ -55,7 +55,7 @@
 
         // Switch player
         currentSymbol = currentSymbol === 'x' ? 'o' : 'x';
-        currentPlayer = currentPlayer === player1 ? player2 : player1;
+        currentPlayer = currentPlayer === Player1 ? Player2 : Player1;
         message.textContent = `${currentPlayer}, you're up!`;
       });
     });
